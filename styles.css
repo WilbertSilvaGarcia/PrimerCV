@@ -1,0 +1,138 @@
+/*Importamos una fuente*/
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+/*Aplicamos un selector universal para seleccionar todos 
+los elementos del documento*/
+* {
+    /*Calcula el ancho y alto de un elemento*/
+    /*boder-box mantien el tamanio y se usa para que box model no se rompa*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  .image-profile{
+    text-align: center;
+  }
+  .objetivo{
+    text-align: left;
+    padding: 20px;
+    color: white;
+  }
+  .habilidades{
+    text-align: left;
+    padding: 20px;
+    color: white;
+  }
+  .contacto{
+    text-align: center;
+    padding: 20px;
+    color: white;
+  }
+  .logo-btn{
+    text-align: center;
+    color:rgba(249, 237, 203) ;
+
+  }
+  .name{
+    text-align: center;
+  }
+ .ubs {
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+ }
+ .cursos{
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+
+ }
+.idiomas{
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+}
+.educacion{
+  text-align: left;
+  margin: 20px;
+  padding: 20px;
+}
+  
+  html {
+    height: 100%;
+  }
+  h1{
+    color: rgba(249, 237, 203);
+  }
+  h2{
+    color: rgba(249, 237, 203);
+  }
+  h3{
+    color: rgba(72, 78, 94);
+    background-color:rgb(226, 211, 170) ;
+    padding: 10px;
+  }
+  h4 {
+    color: rgba(249, 237, 203);
+  }
+  body {
+    font-family: "Public Sans", sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+  }
+  .grid-container > * {
+    /*Aniade efectos de sombras alrededor del marco de un elemento*/
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.397);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+  }
+  .grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-areas: 
+        "header"
+        "sidebar"
+        "main"
+  }
+  .header {
+    grid-area: header;
+    background-color: rgba(72, 78, 94);
+  }
+
+  .sidebar {
+    grid-area: sidebar;
+    background-color: rgba(72, 78, 94);
+  }
+  
+  .main {
+    grid-area: main;
+    background-color: #f5f5f5;
+  }
+
+  /*Para que nuestro disenio de nuestro pagina se adapte de
+  diferente manera en otro dispositivo*/
+  @media (min-width: 600px) {
+    .grid-container{
+        
+        /*grid-template-columns: 400px auto;
+        grid-template-rows: 80px 50px auto 50px;
+        grid-template-areas: 
+        "header header"
+        "navbar navbar"
+        "sidebar main"
+        "footer footer";*/
+        grid-template:
+        "header header" 80px
+        "sidebar main" auto /
+         400px   auto;
+    }
+}
+    @media (min-width: 900px){
+        .grid-container{
+            grid-template:
+            "sidebar header" 80px
+            "sidebar main" auto/
+             400px   auto ;
+        }
+  }
